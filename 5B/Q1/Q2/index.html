@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sum and average of 10 numbers</title>
+<style>
+header{font-size: 20px;color: black; float: left;}
+samp{font-weight: bold; font-size: 15px;font-family: inherit;}
+kbd{background-color: #eee; border-radius: 3px;border: 1px solid #b4b4b4; box-shadow: 0 1px 1px rgba(0,0,0,0.2),0 2px 0 0 rgba(255,255,255,0.7) inset; color: #333; display: inline-block;font-size: 0.85em;font-weight: 700; line-height: 1;padding: 2px 4px; white-space: nowrap;}
+h2{width:800px;}
+footer{width: 750px; color: blue; font-style: italic;}
+pre{ width:750px;border-style: solid;border-width: 3px;border-right-width: 3px; border-left-width: 3px; border-color: black; border-bottom-width: 3px}
+
+</style>
+</head>
+<body><h1>
+<h2>Problem Statement:</h2><h2>Write a program in any language to find the sum of the series 1 +11 + 111 + 1111 + ... n terms</h2>
+</h1>
+<p><strong>Code:</strong></p>
+<pre>
+    #include <stdio.h>
+        void main() <br>
+        {  <br>
+            int n,i;<br>
+            long sum=0;<br>
+            long int t=1;<br>
+            printf("Input the number of terms : ");<br>
+            scanf("%d",&n);<br>
+            for(i=1;i<n+1;i++)<br>
+            {<br>
+                printf("%ld  ",t);<br>
+                scanf("%d",&n);<br>
+                if (i<n)<br>
+                {<br>
+                printf("+ ");<br> 
+                }<br>
+                sum=sum+t;<br>
+                t=(t*10)+1;<br>
+            }<br>
+            printf("\nThe Sum is : %ld\n",sum);<br>
+        }<br>
+        
+    </pre>
+    <p><strong>Variables used in the program:</strong></p>
+    <var>i, n, sum</var>
+    <p><strong>Sample Input:</strong></p>
+    <samp>Input the number of terms<kbd> 5</kbd><br>
+    </samp>
+    <p><samp>Sample Output:<br>1 + 11 + 111 + 1111 + 11111                                                                                  
+        The Sum is <kbd>: 12345 </kbd>
+    </samp></p>
+    <p><strong>Complexity:</strong></p>
+    <p>n</p>
+</body>
+</html>
